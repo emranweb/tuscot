@@ -9,7 +9,7 @@ const RootLayout = () => {
             <div className="w-1/5">
                 <Sidebar />
             </div>
-            <div className="w-4/5 bg-dashboard h-screen">
+            <div className="w-4/5 bg-dashboard h-screen pl-8">
                 <Topbar />
                 {<Outlet />}
             </div>

@@ -1,12 +1,15 @@
 import React from "react";
 import { AiOutlineLeft } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
     return (
         <div className=" w-96 mx-auto">
-            <div className="mt-10 text-textsecondary flex items-center gap-2">
-                <AiOutlineLeft /> Back to dashboard
+            <div className="mt-10 text-textsecondary ">
+                <Link to="/" className="flex items-center gap-2">
+                    <AiOutlineLeft /> Back to dashboard
+                </Link>
             </div>
             <div className=" mt-40">
                 <h2 className="text-4xl font-bold leading-normal font-poppins text-textprimary mb-2 ">

@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { AiOutlineLeft } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
+import { Link } from "react-router-dom";
 
 const SignIn = () => {
     const { register, watch, formState, handleSubmit } = useForm();
@@ -12,8 +13,10 @@ const SignIn = () => {
 
     return (
         <div className=" w-96 mx-auto">
-            <div className="mt-10 text-textsecondary flex items-center gap-2">
-                <AiOutlineLeft /> Back to dashboard
+            <div className="mt-10 text-textsecondary  gap-2">
+                <Link to="/" className="flex items-center">
+                    <AiOutlineLeft /> Back to dashboard
+                </Link>
             </div>
             <div className=" mt-40">
                 <h2 className="text-4xl font-bold leading-normal font-poppins text-textprimary mb-2 ">
@@ -50,6 +53,12 @@ const SignIn = () => {
                 <button className="bg-primary text-white rounded-md w-full py-4 text-sm font-medium mt-6">
                     Sign in
                 </button>
+                <div className="text-sm font-medium text-textsecondary hover:text-primary mt-2">
+                    <Link to="/passwordreset">Forget password?</Link>
+                </div>
+                <div className="text-sm font-medium text-textsecondary mt-2 hover:text-primary">
+                    <Link to="/signup">Create and Account</Link>
+                </div>
             </form>
         </div>
     );

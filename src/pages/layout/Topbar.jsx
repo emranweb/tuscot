@@ -4,7 +4,7 @@ import { BsFillMoonFill } from "react-icons/bs";
 import { BiErrorCircle } from "react-icons/bi";
 const Topbar = () => {
     return (
-        <div className="px-8 py-12 flex justify-between">
+        <div className="pr-8 py-8 flex justify-between flex-wrap">
             <div className="leftsection">
                 <div className="text-xs leading-normal font-normal text-textsecondary">
                     Pages / Dashboard
