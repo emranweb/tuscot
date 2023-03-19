@@ -9,19 +9,25 @@ const userSignIn = (req, res) => {
     res.send(token);
 };
 
+// User Sign Up Controller
 const userSignUp = (req, res) => {
     const { name, email, password } = req.body;
-    let token = jwt.sign(data, process.env.JSON_WEB_TOKEN_KEY);
+    // JWT token
+    let token = jwt.sign(
+        { name, email, password },
+        process.env.JSON_WEB_TOKEN_KEY
+    );
+    // Password bcrypt
     bcrypt
         .hash(password, Number(process.env.PASSWORD_ENCRIPT_SALT_ROUND))
-        .then((data) => {
-            const user = {
+        .then((hashPassword) => {
+            const newRegisterUser = {
                 name: name,
                 email: email,
-                password: data,
+                password: hashPassword,
                 token: token,
             };
-            console.log(user);
+            console.log(newRegisterUser);
         });
 
     res.send("hi");
