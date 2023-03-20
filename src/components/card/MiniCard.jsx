@@ -2,7 +2,7 @@ import React from "react";
 
 const MiniCard = ({ icon, title, subtitle }) => {
     return (
-        <div className="bg-white rounded-2xl flex items-center py-4 px-5 w-60">
+        <div className="bg-white rounded-2xl flex items-center py-4 px-5 w-2/12">
             <div className="bg-[#F4F7FE] rounded-full text-primary w-14 h-14 text-2xl flex items-center justify-center mr-4">
                 {icon}
             </div>

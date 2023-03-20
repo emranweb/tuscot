@@ -6,6 +6,7 @@ import SignUp from "./pages/SignUp";
 import RootLayout from "./pages/layout/RootLayout";
 import Dashboard from "./pages/Dashboard";
 import PasswordReset from "./pages/PasswordReset";
+import Profile from "./pages/Profile";
 
 const router = createBrowserRouter([
     {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Dashboard />,
+            },
+            {
+                path: "/profile",
+                element: <Profile />,
             },
             // {
             //     path: "signup",

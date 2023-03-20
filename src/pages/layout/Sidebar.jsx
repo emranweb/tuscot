@@ -52,7 +52,7 @@ const Sidebar = () => {
                         </span>
                         <NavLink
                             className=" font-poppins text-base text-[#A3AED0] font-medium "
-                            to="/"
+                            to="/profile"
                         >
                             Profile
                         </NavLink>

@@ -10,3 +10,6 @@ html {
 *:after {
     box-sizing: inherit;
 }
+html {
+    font-family: "Poppins";
+}

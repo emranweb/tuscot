@@ -2,6 +2,7 @@ import React from "react";
 import { AiOutlineBell } from "react-icons/ai";
 import { BsFillMoonFill } from "react-icons/bs";
 import { BiErrorCircle } from "react-icons/bi";
+import avatar from "/profile-avatar.png";
 const Topbar = () => {
     return (
         <div className="pr-8 py-8 flex justify-between flex-wrap">
@@ -26,9 +27,9 @@ const Topbar = () => {
                     <BsFillMoonFill />
                     <BiErrorCircle />
                 </div>
-                <div className="profile">
+                <div className="w-10 h-10">
                     <img
-                        src="https://i.pravatar.cc/40"
+                        src={avatar}
                         alt="profile avatar"
                         className="rounded-full cursor-pointer"
                     />
