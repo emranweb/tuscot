@@ -1,6 +1,7 @@
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import * as dotenv from "dotenv";
+import UserDB from "../model/userModel.js";
 
 // user sign in controller
 const userSignIn = (req, res) => {
@@ -21,13 +22,14 @@ const userSignUp = (req, res) => {
     bcrypt
         .hash(password, Number(process.env.PASSWORD_ENCRIPT_SALT_ROUND))
         .then((hashPassword) => {
-            const newRegisterUser = {
+            const user = new UserDB({
                 name: name,
                 email: email,
                 password: hashPassword,
-                token: token,
-            };
-            console.log(newRegisterUser);
+            });
+            user.save()
+                .then((response) => console.log(response))
+                .catch((error) => console.log(error));
         });
 
     res.send("hi");
