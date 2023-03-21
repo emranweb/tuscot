@@ -1,2 +1,1 @@
-# vite-react-tailwind
-This is a starter template of vite + reactjs + tailwindcss
+# React JS Complete Aadmin Dashboard with Vite Tailwind and React in Backend NodeJS and ExpressJS
