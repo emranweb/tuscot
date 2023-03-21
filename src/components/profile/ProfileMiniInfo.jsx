@@ -17,7 +17,7 @@ const ProfileMiniInfo = () => {
                     Product Designer
                 </p>
             </div>
-            <div className="w-2/3 mx-auto flex justify-between items-center  m-5">
+            <div className="w-2/3 mx-auto flex justify-between items-center  m-5 sm:flex-col">
                 <div>
                     <h5 className="text-2xl font-bold text-textprimary">17</h5>
                     <p className="text-sm font-medium text-textsecondary">
@@ -38,6 +38,9 @@ const ProfileMiniInfo = () => {
                         Follower
                     </p>
                 </div>
+                <button className="text-sm text-white p-3 bg-primary rounded-xl">
+                    Publish now
+                </button>
             </div>
         </div>
     );
