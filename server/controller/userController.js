@@ -11,7 +11,7 @@ const userSignIn = (req, res) => {
 };
 
 // User Sign Up Controller
-const userSignUp = (req, res) => {
+const userSignUp = (req, res, next) => {
     const { name, email, password } = req.body;
     // JWT token
     let token = jwt.sign(
@@ -28,11 +28,10 @@ const userSignUp = (req, res) => {
                 password: hashPassword,
             });
             user.save()
-                .then((response) => console.log(response))
-                .catch((error) => console.log(error));
-        });
-
-    res.send("hi");
+                .then((response) => res.send("data saved"))
+                .catch((error) => next(error));
+        })
+        .catch((error) => next(error));
 };
 
 const userController = { userSignIn, userSignUp };

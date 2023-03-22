@@ -23,6 +23,18 @@ app.use(cors());
 
 app.use("/user", userRouter);
 
+// error handlers
+app.get("/error", async function (req, res, next) {
+    const response = await fetch("https://jsonplaceholder.typico.com/posts");
+    const data = response.json();
+    res.send(data);
+});
+
+app.use((err, req, res, next) => {
+    console.log(err.stack);
+    res.status(500).send(err.message);
+});
+
 app.listen(9000, () => {
     console.log("server is running");
 });
