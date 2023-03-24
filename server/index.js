@@ -4,9 +4,11 @@ const app = express();
 import * as dotenv from "dotenv";
 dotenv.config();
 import mongoose from "mongoose";
+import userRouter from "./routes/userRoute.js";
+import errorMiddleware from "./middleware/error.js";
+import authMiddleware from "./middleware/auth.js";
 
 //database connection
-
 mongoose
     .connect(process.env.MONGODB_CONNECT_URL)
     .then(() => {
@@ -14,26 +16,16 @@ mongoose
     })
     .catch((error) => console.log("DB conection Issue:", error));
 
-import userRouter from "./routes/userRoute.js";
-
-//json middleware
+// Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 
-app.use("/user", userRouter);
+// Routes
+app.use("/user", authMiddleware, userRouter);
 
-// error handlers
-app.get("/error", async function (req, res, next) {
-    const response = await fetch("https://jsonplaceholder.typico.com/posts");
-    const data = response.json();
-    res.send(data);
-});
-
-app.use((err, req, res, next) => {
-    console.log(err.stack);
-    res.status(500).send(err.message);
-});
+// error handler middlewaere
+app.use(errorMiddleware);
 
 app.listen(9000, () => {
     console.log("server is running");
