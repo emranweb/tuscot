@@ -50,9 +50,7 @@ const SignIn = () => {
                         placeholder="*****"
                     />
                 </div>
-                <button className="bg-primary text-white rounded-md w-full py-4 text-sm font-medium mt-6">
-                    Sign in
-                </button>
+                <button className="btn btn-secondary w-full">Sign in</button>
                 <div className="text-sm font-medium text-textsecondary hover:text-primary mt-2">
                     <Link to="/passwordreset">Forget password?</Link>
                 </div>

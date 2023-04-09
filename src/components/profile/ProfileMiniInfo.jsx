@@ -38,9 +38,6 @@ const ProfileMiniInfo = () => {
                         Follower
                     </p>
                 </div>
-                <button className="text-sm text-white p-3 bg-primary rounded-xl">
-                    Publish now
-                </button>
             </div>
         </div>
     );
