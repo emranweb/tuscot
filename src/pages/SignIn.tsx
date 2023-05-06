@@ -9,7 +9,7 @@ import Button from "../components/button";
 const SignIn = () => {
     const { register, watch, formState, handleSubmit } = useForm();
 
-    const onSubmit = (data) => {
+    const onSubmit = (data: string) => {
         console.log(data);
     };
 
@@ -27,7 +27,13 @@ const SignIn = () => {
                 <p className="text-base text-textsecondary">
                     Enter your email and password to sign in!
                 </p>
-                <Button>Google</Button>
+                <Button
+                    style="w-full"
+                    variant="btn-outline"
+                    icon={<FcGoogle />}
+                >
+                    Google
+                </Button>
             </div>
             <form>
                 <Input
@@ -42,7 +48,7 @@ const SignIn = () => {
                     type="password"
                 />
 
-                <Button> Sign In</Button>
+                <Button style="w-full">Sign In</Button>
 
                 <div>
                     <Link className="link" to="/passwordreset">

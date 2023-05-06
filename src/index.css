@@ -13,3 +13,38 @@ html {
 html {
     font-family: "Poppins";
 }
+
+.heading-1 {
+}
+.heading-2 {
+}
+.heading-3 {
+}
+.heading-4 {
+}
+.heading-5 {
+}
+.heading-6 {
+}
+
+@layer components {
+    .text {
+        @apply text-sm text-left text-textcolor-default;
+    }
+    .btn {
+        @apply px-6 py-3 rounded-lg my-4;
+    }
+    .btn-default {
+        @apply bg-primary-default text-white hover:bg-primary-dark;
+    }
+    .btn-outline {
+        @apply border border-solid border-primary-default;
+    }
+}
+
+.input-label {
+    @apply text-base font-medium text-left  mb-2 inline-block;
+}
+.input-default {
+    @apply w-full px-5 py-4 rounded-xl bg-bgcolor-input;
+}

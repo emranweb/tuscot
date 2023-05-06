@@ -1,22 +1,26 @@
 import React from "react";
 
+type InputPropsType = {
+    text: string;
+    type: string;
+    placeholder: string;
+};
+
 const Input = ({
     text = "Label",
     type = "text",
     placeholder = "placeholder text",
-    other,
-}) => {
+}: InputPropsType) => {
     return (
         <>
             <div className="label">
-                <label className="label-text">{text}</label>
+                <label className="input-label">{text}</label>
             </div>
             <input
-                className="input input-bordered w-full max-w-md"
+                className="input-default"
                 type={type}
                 placeholder={placeholder}
                 required={false}
-                {...other}
             />
         </>
     );

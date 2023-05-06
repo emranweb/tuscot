@@ -1,6 +1,12 @@
 import React from "react";
 
-const MiniCard = ({ icon, title, subtitle }) => {
+type MiniCardPropsType = {
+    icon: JSX.Element;
+    title: string;
+    subtitle: string;
+};
+
+const MiniCard = ({ icon, title, subtitle }: MiniCardPropsType) => {
     return (
         <div className="bg-white rounded-2xl flex items-center py-4 px-5 w-2/12">
             <div className="bg-[#F4F7FE] rounded-full text-primary w-14 h-14 text-2xl flex items-center justify-center mr-4">
