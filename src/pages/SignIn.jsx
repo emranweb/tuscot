@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import { AiOutlineLeft } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import Input from "../components/input";
+import Button from "../components/button";
 
 const SignIn = () => {
     const { register, watch, formState, handleSubmit } = useForm();
@@ -25,37 +27,33 @@ const SignIn = () => {
                 <p className="text-base text-textsecondary">
                     Enter your email and password to sign in!
                 </p>
-                <button className="bg-dashboard rounded-xl w-full py-4 text-sm font-medium mt-6 flex gap-2 justify-center items-cente">
-                    <FcGoogle className="text-2xl" /> Sign in with Google
-                </button>
+                <Button>Google</Button>
             </div>
-            <form className="mt-6">
+            <form>
+                <Input
+                    type="email"
+                    placeholder="Enter your email adress"
+                    text="Email"
+                />
+
+                <Input
+                    text="Password"
+                    placeholder="Enter your password"
+                    type="password"
+                />
+
+                <Button> Sign In</Button>
+
                 <div>
-                    <label className="text-sm font-medium mb-2 inline-block">
-                        Email*
-                    </label>
-                    <input
-                        type="email"
-                        className="w-full border border-solid border-[#E0E5F2] rounded-md py-4 px-4"
-                        placeholder="mail@simmmple.com"
-                    />
+                    <Link className="link" to="/passwordreset">
+                        Forget password?
+                    </Link>
                 </div>
-                <div className="mt-6">
-                    <label className="text-sm font-medium mb-2 inline-block">
-                        Password*
-                    </label>
-                    <input
-                        type="password"
-                        className="w-full border border-solid border-[#E0E5F2] rounded-md py-4 px-4"
-                        placeholder="*****"
-                    />
-                </div>
-                <button className="btn btn-secondary w-full">Sign in</button>
-                <div className="text-sm font-medium text-textsecondary hover:text-primary mt-2">
-                    <Link to="/passwordreset">Forget password?</Link>
-                </div>
-                <div className="text-sm font-medium text-textsecondary mt-2 hover:text-primary">
-                    <Link to="/signup">Create and Account</Link>
+
+                <div>
+                    <Link className="link" to="/signup">
+                        Create and Account
+                    </Link>
                 </div>
             </form>
         </div>
