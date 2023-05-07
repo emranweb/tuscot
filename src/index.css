@@ -27,6 +27,12 @@ html {
 .heading-6 {
 }
 
+@layer base {
+    body {
+        @apply bg-bgcolor-body;
+    }
+}
+
 @layer components {
     .text {
         @apply text-sm text-left text-textcolor-default;

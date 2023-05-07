@@ -17,6 +17,7 @@ module.exports = {
                 default: "#000",
             },
             bgcolor: {
+                body: "#F9F8F8",
                 input: "#f7f8f9",
                 default: "#f7f8f9",
             },

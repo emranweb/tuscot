@@ -5,7 +5,7 @@ import { BiErrorCircle } from "react-icons/bi";
 import avatar from "/profile-avatar.png";
 const Topbar = () => {
     return (
-        <div className="pr-8 py-8 flex justify-between flex-wrap">
+        <div className="pr-8 py-8 flex justify-between flex-wrap bg-white">
             <div className="leftsection">
                 <div className="text-xs leading-normal font-normal text-textsecondary">
                     Pages / Dashboard
