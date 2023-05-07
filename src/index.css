@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 html {
-    font-family: "Poppins";
+  font-family: "Poppins";
 }
 
 .heading-1 {
@@ -28,29 +28,33 @@ html {
 }
 
 @layer base {
-    body {
-        @apply bg-bgcolor-body;
-    }
+  body {
+    @apply bg-bgcolor-body;
+  }
 }
 
 @layer components {
-    .text {
-        @apply text-sm text-left text-textcolor-default;
-    }
-    .btn {
-        @apply px-6 py-3 rounded-lg my-4;
-    }
-    .btn-default {
-        @apply bg-primary-default text-white hover:bg-primary-dark;
-    }
-    .btn-outline {
-        @apply border border-solid border-primary-default;
-    }
+  .text {
+    @apply text-sm text-left text-textcolor-default;
+  }
+  .btn {
+    @apply px-6 py-3 rounded-lg my-4;
+  }
+  .btn-default {
+    @apply bg-primary-default text-white hover:bg-primary-dark;
+  }
+  .btn-outline {
+    @apply border border-solid border-primary-default;
+  }
 }
 
 .input-label {
-    @apply text-base font-medium text-left  mb-2 inline-block;
+  @apply text-base font-medium text-left  mb-2 inline-block;
 }
 .input-default {
-    @apply w-full px-5 py-4 rounded-xl bg-bgcolor-input;
+  @apply w-full px-5 py-4 rounded-xl bg-bgcolor-input;
+}
+
+.navbar-link {
+  @apply font-roboto text-base text-[#A3AED0] font-medium;
 }

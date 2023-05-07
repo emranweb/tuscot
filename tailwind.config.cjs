@@ -22,5 +22,9 @@ module.exports = {
         default: "#f7f8f9",
       },
     },
+    fontFamily: {
+      poppins: "Poppins",
+      roboto: "Roboto",
+    },
   },
 };

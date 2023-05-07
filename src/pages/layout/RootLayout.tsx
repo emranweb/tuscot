@@ -4,17 +4,17 @@ import Sidebar from "./Sidebar";
 import Topbar from "./Topbar";
 
 const RootLayout = () => {
-    return (
-        <div className="flex">
-            <div className="w-1/5 bg-white">
-                <Sidebar />
-            </div>
-            <div className="w-4/5 bg-dashboard h-screen pl-8">
-                <Topbar />
-                {<Outlet />}
-            </div>
-        </div>
-    );
+  return (
+    <div className="flex">
+      <div className="w-2/12 bg-white">
+        <Sidebar />
+      </div>
+      <div className="w-full bg-dashboard h-screen ">
+        <Topbar />
+        {<Outlet />}
+      </div>
+    </div>
+  );
 };
 
 export default RootLayout;
