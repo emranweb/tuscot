@@ -2,8 +2,9 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import Topbar from "./Topbar";
+import { ReactElement } from "react";
 
-const RootLayout = () => {
+const RootLayout = (): ReactElement => {
     return (
         <div className="flex">
             <div className="w-1/5 bg-white">
